@@ -1,10 +1,11 @@
-const getAgePlugin = require('get-age')
+const {v4:uuidv4} = require('uuid')
 
-const getAge = (birthdate)=>{
-    if(!birthdate) return new Error('birthdate is required')
-    return getAgePlugin(birthdate)
+
+const getUUID = ()=>{
+
+    return uuidv4()
 }
 
 module.exports={
-    getAge
+    getUUID,
 }
